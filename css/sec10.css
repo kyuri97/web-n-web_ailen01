@@ -1,0 +1,34 @@
+#sec7 {
+  width:100%;
+  height:100vh;
+  color:#4b4f96;
+  position: relative;
+}
+#sec7 .textwrap {
+  position: absolute;
+  top:0%;
+  left:10%;
+  transform:translateY(0%);
+}
+
+#sec7 h2 {
+  font-size:2.8vw;
+  margin-bottom: 0vw;
+}
+#sec7 h3 {
+  margin-bottom:4vw;
+  font-weight: 400;
+  font-size: 1vw;
+  letter-spacing: -0.1rem;
+}
+#sec7 p {
+  font-weight: 300;
+  font-size:.9vw;
+  line-height: 200%;
+}
+
+#sec7 .page3 {
+  position: absolute;
+  right:0;
+  height:95%;
+}

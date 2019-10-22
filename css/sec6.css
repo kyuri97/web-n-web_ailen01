@@ -1,0 +1,17 @@
+#sec6 {
+  width:100%;
+  height:70vh;
+  background:url("../imgs/3.png") no-repeat 50% 50%;
+  background-size: cover;
+  position: relative;
+  text-align: center;
+  color:white;
+  margin:10vw 0;
+  background-attachment: fixed;
+}
+
+#sec6 h2 {
+  font-size:6vw;
+  letter-spacing: 0rem;
+  margin-bottom:.5vw;
+}

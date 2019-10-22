@@ -1,0 +1,65 @@
+nav {
+  position: fixed;
+  z-index: 99;
+  width:360px;
+  text-align: center;
+  right:-20%;
+  top:10%;
+  border-radius: 5px;
+  border:1px solid black;
+  background: white;
+  font-size:.9rem;
+  transition: all ease .5s;
+  cursor: pointer;
+}
+nav * {
+  font-family: 'Overpass Mono', monospace;
+  font-weight: 300;
+}
+nav .nav_title{
+  display: inline-block;
+  padding:8px;
+  font-weight: 700;
+  width:60%;
+}
+nav .nav_icon {
+  width:8px;
+  height:8px;
+  background:rgba(0,0,0,0);
+  border:1px solid black;
+  border-radius:100%;
+  display: inline-block;
+  float: right;
+  margin-top:12px;
+  margin-right:8px;
+}
+nav .nav_icon::after {
+  content: "";
+  display: block;
+  clear:both;
+}
+nav ul {
+  text-align: left;
+  background: #ff9580;
+  overflow: hidden;
+  transition: all .5s ease;
+  padding:32px;
+  border-top:1px solid black;
+}
+nav ul li h4 {
+  font-weight: 700;
+}
+nav ul li h4 span {
+  margin:0;
+  margin-left:-8px;
+  transform:translateX(-100%);
+  display: inline-block;
+  opacity:0;
+}
+nav ul li * {
+  margin-bottom:12px;
+}
+nav ul li {
+  margin-bottom:24px;
+  border-bottom:1px solid #ff5837;
+}

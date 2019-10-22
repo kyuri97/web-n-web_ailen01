@@ -1,0 +1,51 @@
+ * {
+  margin:0;
+  padding:0;
+   font-family: 'Abril Fatface', cursive;
+ }
+ul,ol,li {
+  list-style: none;
+}
+::-webkit-scrollbar {
+  width: 5px;
+}
+
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #e0a311;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
+html {
+  overflow-x: hidden;
+  scroll-behavior: smooth;
+}
+body {
+  background: #fff7f5;
+}
+.center {
+  position: absolute;
+  top:50%;
+  left:50%;
+  transform: translate(-50%,-50%);
+}
+
+.korean {
+  font-family: 'Noto Sans KR', sans-serif;
+}
+
+.overpass {
+  font-family: 'Overpass Mono', monospace;
+  font-weight: 300;
+}
+a {
+  text-decoration: none;
+  color:black;
+}
+a:active {
+  color:black;
+}

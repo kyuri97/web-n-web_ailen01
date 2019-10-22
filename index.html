@@ -1,0 +1,376 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <link href="https://fonts.googleapis.com/css?family=Noto+Sans+KR:300,400,700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Abril+Fatface&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Overpass+Mono:300,700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/init.css">
+    <link rel="stylesheet" href="css/nav.css">
+    <link rel="stylesheet" href="css/header.css">
+    <link rel="stylesheet" href="css/sec1.css">
+    <link rel="stylesheet" href="css/sec2.css">
+    <link rel="stylesheet" href="css/sec3.css">
+    <link rel="stylesheet" href="css/sec4.css">
+    <link rel="stylesheet" href="css/sec5.css">
+    <link rel="stylesheet" href="css/sec6.css">
+    <link rel="stylesheet" href="css/sec7.css">
+    <link rel="stylesheet" href="css/sec8.css">
+    <link rel="stylesheet" href="css/sec9.css">
+    <link rel="stylesheet" href="css/sec10.css">
+    <link rel="stylesheet" href="css/footer.css">
+  </head>
+  <body>
+    <nav>
+      <p class="nav_title">INDEX</p>
+      <p class="nav_icon"></p>
+      <ul>
+        <a href="#sec1">
+          <li>
+            <h4><span>></span>FOREWORD</h4>
+            <p>Alien Hand Syndrome ; attention</p>
+          </li>
+        </a>
+        <a href="#sec2">
+          <li>
+            <h4><span>></span>DEFINITION</h4>
+            <p>Definition and features</p>
+          </li>
+        </a>
+        <a href="#sec4">
+          <li>
+            <h4><span>></span>CAUSE</h4>
+            <p>Causes of neurological symptoms</p>
+          </li>
+        </a>
+        <a href="#sec6">
+          <li>
+            <h4><span>></span>SYMPTOM</h4>
+            <p>Neurological symptoms</p>
+          </li>
+        </a>
+        <a href="#sec9">
+          <li style="border:none;">
+            <h4><span>></span>MANAGEMENT PLAN</h4>
+            <p>Mirror box and botox</p>
+          </li>
+        </a>
+      </ul>
+    </nav>
+    <script type="text/javascript">
+      var nav = document.getElementsByTagName('nav')[0]
+      var nav_title = nav.getElementsByClassName('nav_title')[0]
+      var nav_ul = nav.getElementsByTagName('ul')[0]
+      var nav_icon = nav.getElementsByClassName('nav_icon')[0]
+      var nav_ul_height = nav_ul.offsetHeight - 44
+      var navCount = 0
+      var navCurrent = nav.getElementsByTagName('span')
+      function navActive(){
+        nav_ul.style.height = nav_ul_height + "px"
+        nav_ul.style.padding = "16px 32px"
+        nav.style.width = 360+"px"
+        nav_icon.style.background = "rgba(0,0,0,0)"
+      }
+      function navUnactive(){
+        nav_ul.style.height = 0 + "px"
+        nav_ul.style.padding = "0px 32px"
+        nav.style.width = 160+"px"
+        nav_icon.style.background = "#ff5837"
+      }
+      nav_ul.style.height = nav_ul.height + "px"
+      nav_title.onclick = function(e){
+        navCount++
+        if(navCount%2==1){
+          navUnactive()
+        }
+        else if(navCount%2==0){
+          navActive()
+        }
+      }
+      var once = 0
+      window.onscroll = function(e){
+        if(window.scrollY<800){
+          nav.style.right = "-20%"
+          navUnactive()
+          if(once==2){
+            nav.style.right = "5%"
+          }
+        }
+        if(window.scrollY>800){
+          if(once == 0){
+            nav.style.right = "5%"
+            setTimeout(function(){
+              navActive()
+            },400)
+          }
+          once = 2
+        }
+        if(window.scrollY>=sec1.offsetTop-10){
+          for(var i=0;i<navCurrent.length;i++){
+            navCurrent[i].style.opacity = 0;
+          }
+          navCurrent[0].style.opacity = 1;
+        }
+        if(window.scrollY>=sec2.offsetTop-10){
+          for(var i=0;i<navCurrent.length;i++){
+            navCurrent[i].style.opacity = 0;
+          }
+          navCurrent[1].style.opacity = 1;
+        }
+        if(window.scrollY>=sec4.offsetTop-10){
+          for(var i=0;i<navCurrent.length;i++){
+            navCurrent[i].style.opacity = 0;
+          }
+          navCurrent[2].style.opacity = 1;
+        }
+        if(window.scrollY>=sec6.offsetTop-10){
+          for(var i=0;i<navCurrent.length;i++){
+            navCurrent[i].style.opacity = 0;
+          }
+          navCurrent[3].style.opacity = 1;
+        }
+        if(window.scrollY>=sec9.offsetTop-10){
+          for(var i=0;i<navCurrent.length;i++){
+            navCurrent[i].style.opacity = 0;
+          }
+          navCurrent[4].style.opacity = 1;
+        }
+      }
+    </script>
+    <header>
+      <img id="h1Stroke" class="h1Stroke" src="imgs/1.png" alt="">
+      <img id="hand" class="hand center" src="imgs/2.png" alt="">
+      <h1 id="htitle">
+        AILEN<br/>
+        HAND<br/>
+        SYNDROME
+      </h1>
+    </header>
+    <script type="text/javascript">
+      window.addEventListener("scroll",function(e){
+        htitle.style.top = 50-window.pageYOffset*.05+"%";
+        h1Stroke.style.top = 5+window.pageYOffset*.025+"%";
+      })
+    </script>
+    <section id="sec1">
+      <div class="textwrap">
+        <h2>Foreword</h2>
+        <h3 class="korean">의지와 상관없이 손이 움직인다?...'외계인 손 증후군' 주의</h3>
+        <p class="korean">
+          [리서치페이퍼=고진아 기자] '외계인 손 증후군'이라는 증상이 있다. 이 증상은 개인의 <br/>
+          의지와는 반대로 비정상적으로 손이 자동으로 움직이면서 조절 불가능한 경우를 <br/>
+          일컫는 신경학적 상태다. 뇌 손상이나 부상으로 인해 유발되는 매우 드문 질환이다. <br/> <br/>
+
+          외계인 손 증후군(AHS, Alien Hand syndrome) <br/>
+          이 증후군을 처음으로 발견하고 기록한 인물은 독일의 정신과 의사이자 신경학자였던 <br/>
+          쿠르트 골트슈타인으로, 당시 환자의 증언이 시초였다. 그 당시 57세였던 이 환자는  <br/>
+          자신이 왼손이 마치 악의적인 계획을 세우고 있는 것처럼, 자신의 의지가 아닌 손의  <br/>
+          의지대로 움직인다는 불평을 했다. 자신의 손이 무의식적으로 계속 움직일 것 같다며,  <br/>
+          손가락이 닿을 수 있는 곳에 있는 물건을 만지려 한다는 것. 여성은 또한 자신이 손을  <br/>
+          유심히 관찰하지 않는 한 손이 무슨일을 하는지 알 수 없다고 덧붙였다. 때때로 손이  <br/>
+          자신의 목 주위를 감싸거나 질식시킨다고도 말했다. <br/> <br/>
+
+          골트슈타인은 1908년 이러한 독특한 사례를 처음으로 확인하고 기록했다. 그러나 <br/>
+           공식적으로 인정받은 시기는 한참 뒤인 1972년이다. 1909년 인정된 이래로 이같은  <br/>
+          증후군의 사례는 40~50건 정도나 더 보고된 것으로 알려진다.
+        </p>
+      </div>
+      <img class="page2" src="imgs/4.png" alt="">
+    </section>
+    <section id="sec2">
+      <div class="textwrap center">
+        <h2>Definition</h2>
+        <h3 class="overpass">Definition and features</h3>
+      </div>
+    </section>
+    <section id="sec3">
+      <div class="textwrap">
+        <h2>Definitiont</h2>
+        <h3 class="overpass">&nbsp;&nbsp;&nbsp;Definition and features</h3>
+        <p class="korean">
+          외계인 손 증후군은 앞서 설명한 대로 인간의 손이 자신의 행동을 의식하지 않고 <br/>
+          무의식적으로 작동하는, 신경 장애의 일종이다. 닥터 스트레인지러브 신드롬  <br/>
+          (Dr. Strangelove Syndrome) 혹은 아나킥 핸드(anarchic hand)라고도 불린다. <br/> <br/>
+
+          이 증후군의 영향을 받는 사람들은 보통 정상적인 힘으로는 통제할 수 없는 손의 상태를  <br/>
+          지니고 있는데, 자신의 자유 의지로는 이해하지 못하거나 행동할 수 없는 행동을 하게 된다. <br/>
+          가령, 손으로 옷을 찢거나 물건을 잡거나 혹은 머리를 쓰다듬는 등의 움직임처럼 반복적인  <br/>
+          움직임을 구하한다. <br/> <br/>
+
+          이에 손의 의지대로 행동하지 못하도록 손을 통제하려고 노력하게 된다. 일부는 마치  <br/>
+          자신의 신체가 아닌 제3자의 대상으로 간주하기도 하며, 다른 일부는 유령이나 신, 마귀  <br/>
+          등의 존재로 인한 것이라는 믿음까지 갖기도 하는 것. 그러나 이 증후군으로 나타나는 손의  <br/>
+          행동은 대체로 무해함으로, 당사자에게는 성가심이나 불편을 초래하는 정도로 간주된다.<br/><br/>
+
+          물론 일부 사람들은 상태가 매우 심각해 고통을 수반하는 경우도 발생할 수 있다. 가령 다른<br/>
+          사람을 때리려 한다거나 질식시키려 하고, 옷을 벗기거나 운전 시 핸들을 다른 쪽으로 꺽을<br/>
+          수 있는 것이다. 어떤 경우에는 의도치 않게 공개적으로 신체의 민간함 부분을 만지거나<br/>
+          긁는 등의 행동을 할 수 있어 난처할 수도 있다.
+        </p>
+      </div>
+      <img class="page3" src="imgs/5.png" alt="">
+    </section>
+    <section id="sec4">
+      <div class="textwrap center">
+        <h2>Cause</h2>
+        <h3 class="overpass">Causes of Neurological Symptoms</h3>
+      </div>
+    </section>
+    <section id="sec5">
+      <div class="textwrap">
+        <h2>Cuase</h2>
+        <h3 class="overpass">&nbsp;&nbsp;&nbsp;Causes of neurological symptoms</h3>
+        <p class="korean">
+          외계인 손 증후군은 정신과 관련된 상태는 아니다. 신경학적 증상이기 때문에, <br/>
+          뇌의 특정 부분에서 손상이나 상해를 입어 유발되는 것으로 알려진다.  <br/>
+          뇌의 특정 부위에 발생하는 질병과도 관련이 있다. 다음과 같다. <br/> <br/>
+
+          1. 뇌들보 : 뇌들보는 뇌의 좌우 대뇌반구 사이에 위치한, 두 반구를 연결하는 신경다발로,  <br/>
+          외계인 손 증후군을 유발시키는 것으로 확인된다. 당사자의 의지에 반하는 행동을 하는  <br/>
+          양손간 대립(intermanual conflict)에 기인한다. <br/> <br/>
+
+          2. 전두엽 : 전두엽은 사람의 기억력과 사고력 등 행동을 담당하는 기관으로, 뇌의 운동  <br/>
+          영역이기도 하다. 그러나 이 영역에서 오작동이 발생하게 되면 외계인 손 증후군이  <br/>
+          유발될 수 있는데, 보통 자신의 의도와 반대로 물건을 집어 던지는 경우다. <br/> <br/>
+
+          3. 마루엽(두정엽) 및 후두엽 : 마루엽은 중심열, 외측열과 두-후두구에 의해  <br/>
+          구분되는 뇌의 상층 부위로, 체감각과 시각, 청각을 통해 입수된 정보를 통합해 신체부위의 <br/>
+          위치 등을 인식하고 기획하는 통합중추다. 후두엽은 우정후두고랑 뒤쪽의 작은 부분이다.  <br/>
+          이들 돌출부는 비정상적인 손 움직임을 담당하는 곳이다. <br/> <br/>
+
+          이외에도 외계인 손 증후군을 파악할 수 있는 몇 가지 이론이 있다. 일부를 소개한다. <br/> <br/>
+
+          4. 단절 이론 : 신체 움직임을 통제하는 것, 그리고 관련된 자발적 행동 사이에 분리가  <br/>
+          존재한다는 이론이다. 이 이론에 따르면, 신체 움직임의 주된 통제 센터가 끊어졌기 때문에  <br/>
+          무의식적인 움직임이 나타날 수 있다. 이러한 단절은 감각의 상실을 초래하게 되고,  <br/>
+          이에 손이 다른 일을 하고 있다고 느끼지 못할 수 있다. <br/> <br/>
+
+          5. 자제력 상실 이론 : 인간의 행동을 규제하는 뇌 시스템이 소외된 손을 통제할 수 없다고  <br/>
+          믿는 이론이다. 이에 행동에 대한 인간의 주도권이 상실되게 된다.
+        </p>
+      </div>
+      <img class="page3" src="imgs/6.png" alt="">
+    </section>
+    <section id="sec6">
+      <div class="textwrap center">
+        <h2>Symptom</h2>
+        <h3 class="overpass">Neurological Symptoms</h3>
+      </div>
+    </section>
+    <section id="sec7">
+      <div class="textwrap">
+        <h2>Symptom</h2>
+        <h3 class="overpass">&nbsp;&nbsp;&nbsp;Neurological Symptoms</h3>
+        <p class="korean">
+          보통 손을 제어할 수 없는 증상이 나타나는데, 이외 기타 증상도 있다. 다음과 같이 소개한다.<br/><br/>
+
+          1. 손이 자신이 알지 못하는 행동을 한다.<br/>
+          2. 손의 행동이 당사자의 주의를 끓었을때에만 행동을 인식할 수 있다.<br/>
+          3. 이 증후군을 앓는 사람들은 자신이 누구에게 소유되어 있거나 혹은 외계인이 자신의<br/>
+          손을 제어하고 있다고 생각할 수 있다.<br/><br/>
+
+          외계인 손 증후군의 증상으로는 다양한 사례들이 학계에 보고되고 있다.<br/>
+          한 남성은 이 증후군으로 인해 한 손이 단추를 채우면 다른 손이 다시 단추를 풀어버리며<br/>
+          한 손으로 모자를 쓰면 다른손이 바로 모자를 벗기는 증상을 보였다.<br/>
+          한밤 중 잠을 자던 사람이 자신의 의지와는 상관없이 왼손이 자신의 목을 조르고,<br/>
+          주방에서 생선을 손질하고 있던 40대 여인은 생선을 토막내고 있던 와중에  자신의<br/>
+          오른손이 생선 토막을 잡아들더니 자신의 입 속으로 집어 넣으려고 했다. <br/>
+          그리고 50대 환자였던 여성은 주사를 맞으려 대기를 하던 도중  자신의 왼손이 주사기를<br/>
+          들더니 자신의 오른손을 향해서 사정없이 바늘로 쑤셨다
+        </p>
+      </div>
+      <img class="page3" src="imgs/6.png" alt="">
+    </section>
+    <section id="sec8">
+      <div class="textwrap">
+        <h2>Instance</h2>
+      </div>
+      <div class="left_button slider_button"><</div>
+      <div class="right_button slider_button">></div>
+      <div class="slider">
+        <ul>
+          <li><img id="s1" src="imgs/s1.png"/></li>
+          <li><img id="s2" src="imgs/s2.png"/></li>
+          <li><img id="s3" src="imgs/s3.png"/></li>
+          <li><img id="s4" src="imgs/s4.png"/></li>
+          <li><img id="s5" src="imgs/s5.png"/></li>
+          <li><img id="s6" src="imgs/s6.png"/></li>
+          <li><img id="s7" src="imgs/s7.png"/></li>
+          <li><img id="s8" src="imgs/s8.png"/></li>
+          <li><img id="s9" src="imgs/s9.png"/></li>
+          <li><img id="s10" src="imgs/s10.png"/></li>
+          <li><img id="s11" src="imgs/s11.png"/></li>
+          <li><img id="s12" src="imgs/s12.png"/></li>
+        </ul>
+      </div>
+      <script type="text/javascript">
+        var slider = document.getElementsByClassName('slider')[0]
+        var slider_ul = slider.getElementsByTagName('ul')[0]
+        var slider_ul_li = slider.getElementsByTagName('li')
+        var slider_ul_li_img = slider.getElementsByTagName('img')
+        var right_button = document.getElementsByClassName('right_button')[0]
+        var left_button = document.getElementsByClassName('left_button')[0]
+        slider_ul.style.width = slider_ul_li[0].offsetWidth * slider_ul_li.length + "px"
+        var clickcount = 0
+        left_button.onclick = function(e){
+          clickcount--
+          if(clickcount<0)clickcount = 0
+          slider_ul.style.transform = "translateX("+-slider_ul_li[0].offsetWidth*clickcount+"px)"
+        }
+        right_button.onclick = function(e){
+          clickcount++
+          if(clickcount>slider_ul_li.length-3)clickcount = slider_ul_li.length-3
+          slider_ul.style.transform = "translateX("+-slider_ul_li[0].offsetWidth*clickcount+"px)"
+        }
+        function imgover(num){
+          slider_ul_li_img[num].onmouseover = function(e){
+            this.setAttribute("src","imgs/s"+parseInt(num+1)+".gif")
+          }
+          slider_ul_li_img[num].onmouseleave = function(e){
+            this.setAttribute("src","imgs/s"+parseInt(num+1)+".png")
+          }
+        }
+        for(var i=0;i<slider_ul_li.length;i++){
+          imgover(i)
+        }
+      </script>
+    </section>
+    <section id="sec9">
+      <div class="textwrap center">
+        <h2>Management Plan</h2>
+        <h3 class="overpass">Mirror box and botox</h3>
+      </div>
+    </section>
+    <section id="sec10">
+      <div class="textwrap">
+        <h2>Management Plan</h2>
+        <h3 class="overpass">&nbsp;&nbsp;&nbsp;Mirror box and botox</h3>
+        <p class="korean">
+          구체적인 치료법은 없다. 그러나 손이 다른 행동을 하지 못하도록 이동하거나<br/>
+          산만하게 만들어 특정 행동을 방지할 수 있다.<br/><br/>
+
+          먼저 미러 박스(Mirror Box)라고 불리는 치료법이 있다. 임상의가 영향을 받고 있는 손을<br/>
+          반사시키기 위해 거울 효과를 활용하는 것인데, 환자는 이를 통해 사지의 움직임이<br/>
+          통증없이 발생했다는 것을 알 수 있다.<br/><br/>
+
+          또한, 원하지 않는 움직임을 일으키지 않도록 손으로 무엇인가를 계속 잡고 있는 것도<br/>
+          효과적이며, 보톡스를 맞는 것도 단기간 동안 근육을 동결시키는데 도움이 된다.<br/><br/>
+
+          [researchpaper 리서치페이퍼=고진아 기자]
+        </p>
+      </div>
+      <img class="page3" src="imgs/6.png" alt="">
+    </section>
+    <footer>
+      <p class="name overpass">Lee Gyuri</p>
+      <div class="textwrap">
+        <p class="email overpass">qorwh7000@gmail.com</p>
+        <p class="insta overpass">@i_gyuri</p>
+        <p class="blog overpass">blog.naver.com/belli_18</p><br/>
+        <p class="hknu overpass">Hknu Design / Digital Contents</p>
+        <p class="birth overpass">1997. 09. 23 Daejeon</p>
+      </div>
+    </footer>
+  </body>
+</html>
